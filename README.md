@@ -1,4 +1,4 @@
-This repository provides the implementation and examples from our paper on ensuring Lipschitz continuity for optimization-based controllers by reformulating Quadratic Programs (QPs) as **Second-Order Cone Programs (SOCPs)**.
+This repository contains the implementation and examples from our paper "Reformulations of Quadratic Programs for Lipschitz Continuity." In the paper, we present a systematic method to guarantee Lipschitz continuity in optimization-based controllers by reformulating Quadratic Programs (QPs) as **Second-Order Cone Programs (SOCPs)**.
 
 ## 🔍 Motivation
 Optimization-based controllers, such as those derived from constrained QPs, are powerful tools for controlling dynamical systems. However, when multiple constraints are involved, the resulting control law $\pi_{\rm qp}$ may lack regularity properties like Lipschitz continuity. This lack of continuity can result in:
@@ -6,8 +6,8 @@ Optimization-based controllers, such as those derived from constrained QPs, are 
 - chattering behavior in closed-loop systems,
 - Non-unique or ill-posed system trajectories.
 
-
-To address this, we propose a novel **SOCP reformulation** that ensures Lipschitz continuity of the control law, *regardless of the structure of the constraint matrices*.
+Previous work typically verifies Lipschitz continuity of QP solutions by analyzing constraint qualifications. However, this analysis is often nontrivial and difficult to generalize.
+Moreover, little attention has been given to handling cases where the required constant qualifications fail. To address this, we propose a novel **SOCP reformulation** that *guarantees* Lipschitz continuity of the control law, *regardless of the structure of the constraint matrices*.
 
 
 ## 🧩 Key Features
@@ -17,7 +17,7 @@ To address this, we propose a novel **SOCP reformulation** that ensures Lipschit
 
 ✅ Faster computation, enabling real-time deployment
 
-✅ Independence from constraint regularity (e.g., no need for linearly independent gradients)
+✅ Independent of constraint qualifications (e.g., no need for *Linear Independence Constraint Qualifications* (LICQs))  
 
 ## 📁 In This Repo
 - The main script is `main.ipynb`, which includes two working examples.
@@ -29,7 +29,7 @@ To get started, open the main script `main.ipynb`. This notebook demonstrates ho
 Two example problems are included to illustrate the performance and structure of the controller. 
 
 ### Examples
-We provide two examples whose original QPs admit non-Lipschitz minimizers (as shown in the animations below) and show that our reformulations do admit Lipschitz continuous minimizers.
+We provide two examples whose original QPs admit non-Lipschitz continuous minimizers (as shown in the animations below) and show that our reformulations do admit Lipschitz continuous minimizers. For more detailed explanations about these examples, please refer to our paper.
 #### Example 1
 ![example1](https://github.com/user-attachments/assets/baba75f8-4c3a-47ee-badf-126f1e4b3db4)
 #### Example 2
