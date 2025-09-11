@@ -35,16 +35,13 @@ We provide two examples whose original QPs admit non-Lipschitz continuous minimi
 #### Example 2
 ![example2](https://github.com/user-attachments/assets/a295eb77-84f1-44e1-9362-dc1d6405a001)
 
-<!--For more detailed analyses of these examples, please refer to our paper.
 
 ## 📜 Citation
-If you use this work, please cite:
 ```bibtex
-@article{your2025paper,
-  title     = {Guaranteed Lipschitz Reformulations of Quadratic Programs with Multiple Constraints},
-  author    = {Agrawal, Devansh and Lee, Haejoon and Panagou, Dimitra},
-  journal   = {...},
-  year      = {2025},
-  note      = {}
+@article{agrawal2025reformulations,
+  title={Reformulations of Quadratic Programs for Lipschitz Continuity},
+  author={Agrawal, Devansh R and Lee, Haejoon and Panagou, Dimitra},
+  journal={arXiv preprint arXiv:2508.18530},
+  year={2025}
 }
--->
+
